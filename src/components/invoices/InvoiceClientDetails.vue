@@ -19,26 +19,14 @@
                      suffix=", "
                      :placeholder="$t('client_city')"
                      @change="updateProp({ client_city: $event })"/>
-        <AppEditable :value="invoice.client_county"
-                     suffix=", "
-                     :placeholder="$t('client_county')"
-                     @change="updateProp({ client_county: $event })"/>
         <AppEditable :value="invoice.client_country"
                      :placeholder="$t('client_country')"
                      class="break-line"
                      @change="updateProp({ client_country: $event })"/>
         <AppError :errors="errors" field="client_city"/>
-        <AppError :errors="errors" field="client_county"/>
         <AppError :errors="errors" field="client_country"/>
 
         <InvoiceClientFields :invoice="invoice"/>
-
-        <AppEditable :value="invoice.client_email"
-                     :errors="errors"
-                     field="client_email"
-                     class="break-line"
-                     :placeholder="$t('client_email')"
-                     @change="updateProp({ client_email: $event })"/>
     </div>
 </template>
 <script>

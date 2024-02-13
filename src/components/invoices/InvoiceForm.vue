@@ -31,17 +31,19 @@
                             <InvoiceTotals :invoice="invoice" :errors="errors" @update="updateProp"/>
                         </table>
                     </div>
-                    <hr>
-                    <div class="row pl-3 pr-3 justify-content-between">
-                        <InvoiceBankDetails :invoice="invoice" :errors="errors" @update="updateProp"/>
-                        <InvoiceContactDetails :invoice="invoice" :errors="errors" @update="updateProp"
-                                               class="text-right"/>
+                    <div>
+                      <InvoiceFooter :invoice="invoice" :errors="errors" @update="updateProp"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+<style scoped>
+.card-body {
+  height: 1250px; /* Adjust as needed */
+}
+</style>
 <script>
 import { mapGetters, mapState } from 'vuex';
 import InvoiceRow from '@/components/invoices/InvoiceRow';
@@ -50,6 +52,7 @@ import InvoiceCompanyDetails from '@/components/invoices/InvoiceCompanyDetails';
 import InvoiceBankDetails from '@/components/invoices/InvoiceBankDetails';
 import InvoiceContactDetails from '@/components/invoices/InvoiceContactDetails';
 import InvoiceHeader from '@/components/invoices/InvoiceHeader';
+import InvoiceFooter from '@/components/invoices/InvoiceFooter';
 import InvoiceTotals from '@/components/invoices/InvoiceTotals';
 import AppEditable from '@/components/form/AppEditable';
 import TeamLogo from '@/components/team/TeamLogo';
@@ -63,6 +66,7 @@ export default {
     TeamLogo,
     InvoiceTotals,
     InvoiceHeader,
+    InvoiceFooter,
     InvoiceContactDetails,
     InvoiceBankDetails,
     InvoiceCompanyDetails,

@@ -23,17 +23,15 @@
                      suffix=", "
                      :placeholder="$t('city')"
                      @change="updateProp({ from_city: $event })"/>
-        <AppEditable :value="invoice.from_county"
-                     suffix=", "
-                     :placeholder="$t('county')"
-                     @change="updateProp({ from_county: $event })"/>
         <AppEditable :value="invoice.from_country"
                      :placeholder="$t('country')"
                      class="break-line"
                      @change="updateProp({ from_country: $event })"/>
-        <AppError :errors="errors" field="from_city"/>
-        <AppError :errors="errors" field="from_county"/>
-        <AppError :errors="errors" field="from_country"/>
+        <AppEditable :value="invoice.from_phone"
+                     :errors="errors"
+                     field="from_phone"
+                     :placeholder="$t('add_phone')"
+                     @change="updateProp({ from_phone: $event })"/>
 
         <InvoiceTeamFields :invoice="invoice"/>
 
@@ -42,10 +40,14 @@
                      field="from_email"
                      :placeholder="$t('your_email')"
                      @change="updateProp({ from_email: $event })"/>
+        <InvoiceBankDetails :invoice="invoice" :errors="errors" @update="updateProp"/>
+        <AppError :errors="errors" field="from_city"/>
+        <AppError :errors="errors" field="from_country"/>
     </div>
 </template>
 <script>
 import AppError from '@/components/form/AppError';
+import InvoiceBankDetails from './InvoiceBankDetails.vue';
 import InvoiceTeamFields from '@/components/invoices/InvoiceTeamFields';
 import AppEditable from '../form/AppEditable';
 
@@ -55,6 +57,7 @@ export default {
   components: {
     AppEditable,
     AppError,
+    InvoiceBankDetails,
     InvoiceTeamFields,
   },
   methods: {

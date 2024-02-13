@@ -1,0 +1,10 @@
+{
+  "invoice_title": "Factuur ",
+  "invoice_number": "Nr.",
+  "issued_at": "Factuurdatum:",
+  "due_at": "Vervaldatum:",
+  "late_fee": "Boete bij te late betaling:",
+  "add_late_fee": "Boete toevoegen",
+  "modal_issued_at_title": "Uitgegeven op",
+  "modal_due_at_title": "Vervaldatum"
+}
