@@ -49,8 +49,6 @@ import { mapGetters, mapState } from 'vuex';
 import InvoiceRow from '@/components/invoices/InvoiceRow';
 import InvoiceClientDetails from '@/components/invoices/InvoiceClientDetails';
 import InvoiceCompanyDetails from '@/components/invoices/InvoiceCompanyDetails';
-import InvoiceBankDetails from '@/components/invoices/InvoiceBankDetails';
-import InvoiceContactDetails from '@/components/invoices/InvoiceContactDetails';
 import InvoiceHeader from '@/components/invoices/InvoiceHeader';
 import InvoiceFooter from '@/components/invoices/InvoiceFooter';
 import InvoiceTotals from '@/components/invoices/InvoiceTotals';
@@ -67,8 +65,6 @@ export default {
     InvoiceTotals,
     InvoiceHeader,
     InvoiceFooter,
-    InvoiceContactDetails,
-    InvoiceBankDetails,
     InvoiceCompanyDetails,
     InvoiceRow,
     InvoiceRowsHeader,

@@ -6,7 +6,7 @@ export default {
     lang: null,
     all: [
       { name: 'English', code: 'en' },
-      { name: 'Dutch', code: 'nl'},
+      { name: 'Dutch', code: 'nl' },
       { name: 'French', code: 'fr' },
       { name: 'Italian', code: 'it' },
       { name: 'Estonian', code: 'et' },
