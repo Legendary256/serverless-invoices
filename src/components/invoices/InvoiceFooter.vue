@@ -12,7 +12,7 @@
         bottom: 10px;
         width: 100%;
         text-align: center;
-        font-size: 0.65em;
+        font-size: 0.6em;
     }
 </style>
 <script>

@@ -47,8 +47,8 @@
 </template>
 <script>
 import AppError from '@/components/form/AppError';
-import InvoiceBankDetails from './InvoiceBankDetails.vue';
 import InvoiceTeamFields from '@/components/invoices/InvoiceTeamFields';
+import InvoiceBankDetails from '@/components/invoices/InvoiceBankDetails.vue';
 import AppEditable from '../form/AppEditable';
 
 export default {
